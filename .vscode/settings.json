@@ -2,6 +2,8 @@
     "git.ignoreLimitWarning": true,
     "svg.preview.background": "editor",
     "cSpell.words": [
-        "Hono"
+        "Hono",
+        "nextjs",
+        "trpc"
     ]
 }
