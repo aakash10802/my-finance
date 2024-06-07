@@ -8,6 +8,13 @@
       "when": 1717792734338,
       "tag": "0000_giant_magik",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1717793769848,
+      "tag": "0001_mighty_lifeguard",
+      "breakpoints": true
     }
   ]
 }
