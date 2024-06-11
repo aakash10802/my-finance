@@ -1,8 +1,20 @@
 import { Hono } from "hono";
+import { db } from "@/db/dirzzle";
+import { accounts } from "@/db/schema";
 
+const app = new Hono().get("/",async(c)=>{
+    const data =await db
+    .select({
+        id: accounts.id,
+        name: accounts.name,
 
-const app = new Hono().get("/",(c)=>{
-    return c.json({accounts: []});
+    })
+    .from(accounts);
+     
+     
+     
+    
+    return c.json({data});
 });
 
 
