@@ -1,19 +1,18 @@
-import { useQuery } from "@tanstack/react-query"
+import { useQuery } from "@tanstack/react-query";
+import { client } from "@/lib/hono";
 
-import {client} from "@/lib/hono"
+export const useGetAccounts = () => {
+  const query = useQuery({
+    queryKey: ['accounts'],
+    queryFn: async () => {
+      const response = await client.api.accounts.$get();
+      if (!response.ok) {
+        throw new Error("failed to fetch accounts");
+      }
+      const { data } = await response.json();
+      return data;
+    }
+  });
 
-
-export const useGetAccounts=()=>{
-    const query = useQuery({
-        queryKey: ['accounts'],
-        queryFn: async () => {
-            queryFn: async ()=>{
-            const x: AccountsType = fetch("/api/accounts");   
-            const response = await client.api.accounts.$get();
-
-
-            }
-            
-        }
-    })
-}
+  return query;
+};
