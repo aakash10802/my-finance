@@ -1,5 +1,5 @@
 import { pgTable ,text} from "drizzle-orm/pg-core";
-
+import { createInsertSchema} from "drizzle-zod"
 
 
 export const accounts = pgTable("accounts",{
@@ -11,3 +11,5 @@ export const accounts = pgTable("accounts",{
        
 
     })
+
+    export const insertAccountSchema = createInsertSchema(accounts)
