@@ -1,4 +1,3 @@
-
 # dependencies
 /node_modules
 /.pnp
@@ -8,10 +7,12 @@
 # testing
 /coverage
 pass.txt
+
 # next.js
 /.next/
 /out/
 .env
+
 # production
 /build
 
@@ -33,3 +34,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# bun
+bun.lockb
+
+# package.json
+package.json
