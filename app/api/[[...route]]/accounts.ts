@@ -5,7 +5,9 @@ import { createId } from "@paralleldrive/cuid2";
 import { db } from "@/db/dirzzle";
 import { accounts, insertAccountSchema } from "@/db/schema";
 import{zValidator} from "@hono/zod-validator"
-const app = new Hono().get(
+
+const app = new Hono()
+.get(
     "/",
     clerkMiddleware(),
     async(c)=>{

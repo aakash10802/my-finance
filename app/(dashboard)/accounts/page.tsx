@@ -11,22 +11,8 @@ import {
 
 } from "@/components/ui/card"
 import { Plus } from "lucide-react";
-import { columns, Payment } from "./columns";
+import { columns } from "./columns";
 import { DataTable } from "@/components/data-table";
-
-const data: Payment[] = [
-    {
-        id: "728ed52f",
-        amount: 100,
-        status: "pending",
-        email: "m@example.com",
-    },    {
-        id: "738ed52f",
-        amount: 1200,
-        status: "success",
-        email: "d@example.com",
-    }
-]
 
 
 const AccountPage =()=>{
@@ -46,7 +32,13 @@ const AccountPage =()=>{
 
                 </CardHeader>
                 <CardContent>
-                    <DataTable filterKey="email  " columns={columns} data={data} />
+                    <DataTable 
+                    filterKey="email" 
+                    columns={columns} 
+                    data={[]}
+                    onDelete={()=>{}}
+                    disabled={false}
+                    />
                 </CardContent>
 
 
