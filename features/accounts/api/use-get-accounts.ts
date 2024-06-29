@@ -4,7 +4,7 @@ import { client } from "@/lib/hono";
 export const useGetAccounts = () => {
   const query = useQuery({
     queryKey: ['accounts'],
-    queryFn: async () => {
+    queryFn: async () => {//@ts-ignore
       const response = await client.api.accounts.$get();
       if (!response.ok) {
         throw new Error("failed to fetch accounts");

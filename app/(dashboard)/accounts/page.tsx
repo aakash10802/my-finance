@@ -13,11 +13,15 @@ import { columns } from "./columns";
 import { DataTable } from "@/components/data-table";
 import { useGetAccounts } from "@/features/accounts/api/use-get-accounts";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useBulkDeleteAccounts } from "@/features/accounts/api/use-bulk-delete";
+
 
 const AccountPage = () => {
     const newAccount = useNewAccount();
+    const deleteAccounts = useBulkDeleteAccounts();
     const accountsQuery = useGetAccounts();
     const accounts = accountsQuery.data || [];
+    
    
     if (accountsQuery.isLoading){
         return(
@@ -34,7 +38,7 @@ const AccountPage = () => {
                 </Card>
 
             </div>
-        )
+        );
     }
     
 
