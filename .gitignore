@@ -12,6 +12,7 @@ pass.txt
 /.next/
 /out/
 .env
+.env.local
 
 # production
 /build
@@ -26,7 +27,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env*.local
+
 
 # vercel
 .vercel
